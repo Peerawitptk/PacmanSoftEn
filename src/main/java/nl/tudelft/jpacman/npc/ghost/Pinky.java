@@ -56,7 +56,7 @@ public class Pinky extends Ghost {
      * The variation in intervals, this makes the ghosts look more dynamic and
      * less predictable.
      */
-    private static final int INTERVAL_VARIATION = 50;
+    private static final int INTERVAL_VARIATION = 500;
 
     /**
      * The base movement interval.
