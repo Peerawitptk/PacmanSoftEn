@@ -1,7 +1,7 @@
 package nl.tudelft.jpacman.game;
 
 import java.util.List;
-
+import nl.tudelft.jpacman.Launcher;
 import nl.tudelft.jpacman.board.Direction;
 import nl.tudelft.jpacman.level.Level;
 import nl.tudelft.jpacman.level.Level.LevelObserver;
@@ -68,7 +68,14 @@ public abstract class Game implements LevelObserver {
             }
             inProgress = false;
             getLevel().stop();
+
         }
+    }
+    /* Restart the game */
+    public void restart(){
+        stop();
+        Launcher.pacManUI.dispose();
+        new Launcher().launch();
     }
 
     /**
@@ -112,5 +119,8 @@ public abstract class Game implements LevelObserver {
     @Override
     public void levelLost() {
         stop();
+
+        
     }
+    
 }

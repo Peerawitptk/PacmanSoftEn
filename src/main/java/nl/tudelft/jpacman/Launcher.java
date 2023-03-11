@@ -33,8 +33,8 @@ public class Launcher {
 
     public static final String DEFAULT_MAP = "/board.txt";
     private String levelMap = DEFAULT_MAP;
-
-    private PacManUI pacManUI;
+    public static PacManUI pacManUI;
+    
     private Game game;
 
     /**
