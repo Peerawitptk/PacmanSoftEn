@@ -2,6 +2,7 @@ package nl.tudelft.jpacman.game;
 
 import java.util.List;
 import nl.tudelft.jpacman.Launcher;
+import nl.tudelft.jpacman.ThemeSelect.Theme;
 import nl.tudelft.jpacman.board.Direction;
 import nl.tudelft.jpacman.level.Level;
 import nl.tudelft.jpacman.level.Level.LevelObserver;
@@ -78,6 +79,12 @@ public abstract class Game implements LevelObserver {
         Launcher.pacManUI.dispose();
         new Launcher().launch();
         }
+    }
+
+    public void back(){
+        stop();
+        Launcher.pacManUI.dispose();
+        new Theme();
     }
 
     /**

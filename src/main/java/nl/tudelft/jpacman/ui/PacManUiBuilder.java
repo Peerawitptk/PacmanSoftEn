@@ -19,14 +19,14 @@ public class PacManUiBuilder {
      */
     private static final String STOP_CAPTION = "Stop";
 
-
-
     /**Restart */
     private static final String RESTART_CAPTION = "Restart";
     /**
      * Caption for the default start button.
      */
 
+    /*Go back to Theme select */
+    private static final String BACK_CAPTION = "Back";
      
     private static final String START_CAPTION = "Start";
 
@@ -73,6 +73,7 @@ public class PacManUiBuilder {
             addStartButton(game);
             addStopButton(game);
             addRestartButton(game); /*add restart */
+            addBackButton(game);
         }
         return new PacManUI(game, buttons, keyMappings, scoreFormatter);
     }
@@ -107,6 +108,13 @@ public class PacManUiBuilder {
         assert game != null;
 
         buttons.put(RESTART_CAPTION, game::restart);
+    }
+    
+    /*Back to Theme select */
+    private void addBackButton(final Game game) {
+        assert game != null;
+
+        buttons.put(BACK_CAPTION, game::back);
     }
     /**
      * Adds a key listener to the UI.
@@ -154,6 +162,7 @@ public class PacManUiBuilder {
         buttons.put(START_CAPTION, null);
         buttons.put(STOP_CAPTION, null);
         buttons.put(RESTART_CAPTION, null); /* restart */
+        buttons.put(RESTART_CAPTION, null); /* back to theme select */
         return this;
     }
 

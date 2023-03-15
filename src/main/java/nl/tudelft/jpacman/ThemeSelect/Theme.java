@@ -8,16 +8,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Theme extends JFrame{
-    private static final int MENU_WIDTH = 700;
-    private static final int MENU_HEIGHT = 800;
+    private static final int MENU_WIDTH = 600; /*not commit */
+    private static final int MENU_HEIGHT = 600; /*not commit */
     private static final Color BACKGROUND_COLOR = new Color(0, 0, 0);
 
 
     public Theme(){
-        UIManager.put("Button.showMnemonics", Boolean.FALSE);
+        UIManager.put("Button.showMnemonics", Boolean.FALSE); /*not commit */
 
         // Set the title and size of the frame
-        setTitle("Pacman Game Menu");
+        setTitle("Pacman Theme Select");
         setSize(MENU_WIDTH, MENU_HEIGHT);
         setResizable(false);
         //set theme class
