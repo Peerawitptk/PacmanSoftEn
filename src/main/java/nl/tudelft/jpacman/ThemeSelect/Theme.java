@@ -8,8 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Theme extends JFrame{
-    private static final int MENU_WIDTH = 600; /*not commit */
-    private static final int MENU_HEIGHT = 600; /*not commit */
+    private static final int MENU_WIDTH = 800; /*not commit */
+    private static final int MENU_HEIGHT = 800; /*not commit */
     private static final Color BACKGROUND_COLOR = new Color(0, 0, 0);
 
 
@@ -31,17 +31,17 @@ public class Theme extends JFrame{
         pacmanImage1.setHorizontalAlignment(JLabel.CENTER);
         getContentPane().add(pacmanImage1, BorderLayout.NORTH);
 
-        JPanel buttonsPanel = new JPanel(new GridLayout(1, 1, 20, 50));  //* สร้างปุ่มกดเลือก */
+        JPanel buttonsPanel = new JPanel(new GridLayout(2, 2, 20, 50));  //* สร้างปุ่มกดเลือก */
         buttonsPanel.setOpaque(false);
         //pacmanImage.setHorizontalAlignment(JLabel.CENTER);
         getContentPane().add(buttonsPanel, BorderLayout.CENTER);
 
 
 
-        JButton newGameButton = new JButton(new ImageIcon("src/main/resources/sprite/bte.png"));
-        newGameButton.setBorderPainted(false);
-        newGameButton.setContentAreaFilled(false);
-        newGameButton.addActionListener(new ActionListener() {
+        JButton Theme1 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeClassic.png"));
+        Theme1.setBorderPainted(false);
+        Theme1.setContentAreaFilled(false);
+        Theme1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 config.setConfig("0");
@@ -49,7 +49,51 @@ public class Theme extends JFrame{
                 dispose();
             }
         });
-        buttonsPanel.add(newGameButton);
+        buttonsPanel.add(Theme1);
+
+        JButton Theme2 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeTest.png"));
+        Theme2.setBorderPainted(false);
+        Theme2.setContentAreaFilled(false);
+        Theme2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Code for options button
+                config.setConfig("1");
+                new Launcher().launch();
+                dispose();
+            }
+        });
+        buttonsPanel.add(Theme2);
+
+
+        JButton Theme3 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeTest.png"));
+        Theme3.setBorderPainted(false);
+        Theme3.setContentAreaFilled(false);
+        Theme3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Code for options button
+                config.setConfig("2");
+                new Launcher().launch();
+                dispose();
+            }
+        });
+        buttonsPanel.add(Theme3);
+
+
+        JButton Theme4 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeTest.png"));
+        Theme4.setBorderPainted(false);
+        Theme4.setContentAreaFilled(false);
+        Theme4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Code for options button
+                config.setConfig("3");
+                new Launcher().launch();
+                dispose();
+            }
+        });
+        buttonsPanel.add(Theme4);
         
 
         buttonsPanel.setPreferredSize(new Dimension(600, 100));

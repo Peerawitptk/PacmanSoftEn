@@ -57,9 +57,15 @@ public class PacManSprites extends SpriteStore {
      */
     public Map<Direction, Sprite> getPacmanSprites() {
         if (config.getConfig() == "0") {
+            return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
+        }else if (config.getConfig()=="1"){
             return directionSprite("/sprite/pacman_olympic.png", PACMAN_ANIMATION_FRAMES);
-        }
-        return null;
+        }else if (config.getConfig()=="2"){
+            return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
+        }else{
+            return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
+        }        
+       
     }
 
     /**
@@ -122,9 +128,15 @@ public class PacManSprites extends SpriteStore {
     ThemeSelect config = new ThemeSelect();
     public Sprite getWallSprite() {
         if (config.getConfig()=="0"){
+            return loadSprite("/sprite/wall.png");       
+        }else if (config.getConfig()=="1"){
+            return loadSprite("/sprite/wall.png");
+        }else if (config.getConfig()=="2"){
+            return loadSprite("/sprite/wall.png");
+        }else{
             return loadSprite("/sprite/wall.png");
         }
-        return null;
+       
     }
 
     /**
@@ -133,8 +145,14 @@ public class PacManSprites extends SpriteStore {
     public Sprite getGroundSprite() {
         if (config.getConfig()=="0"){
             return loadSprite("/sprite/floor.png");
+        }else if (config.getConfig()=="1"){
+            return loadSprite("/sprite/floor.png");
+        }else if (config.getConfig()=="2"){
+            return loadSprite("/sprite/floor.png");
+        }else{
+            return loadSprite("/sprite/floor.png");
         }
-        return null;
+       
     }
 
     /**
@@ -143,8 +161,14 @@ public class PacManSprites extends SpriteStore {
     public Sprite getPelletSprite() {
         if (config.getConfig()=="0"){
             return loadSprite("/sprite/pellet.png");
+        }else if (config.getConfig()=="1"){
+            return loadSprite("/sprite/apple.png");
+        }else if (config.getConfig()=="2"){
+            return loadSprite("/sprite/strawberry.png");
+        }else{
+            return loadSprite("/sprite/melon.png");
         }
-        return null;
+        
     }
 
     /**
