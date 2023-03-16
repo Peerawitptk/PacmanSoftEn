@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class Theme extends JFrame{
     private static final int MENU_WIDTH = 800; /*not commit */
     private static final int MENU_HEIGHT = 800; /*not commit */
-    private static final Color BACKGROUND_COLOR = new Color(0, 0, 0);
+    private static final Color BACKGROUND_COLOR = new Color(255, 255, 153);
 
 
     public Theme(){
@@ -38,7 +38,7 @@ public class Theme extends JFrame{
 
 
 
-        JButton Theme1 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeClassic.png"));
+        JButton Theme1 = new JButton(new ImageIcon("src/main/resources/sprite/classic_theme.png"));
         Theme1.setBorderPainted(false);
         Theme1.setContentAreaFilled(false);
         Theme1.addActionListener(new ActionListener() {
@@ -66,7 +66,7 @@ public class Theme extends JFrame{
         buttonsPanel.add(Theme2);
 
 
-        JButton Theme3 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeTest.png"));
+        JButton Theme3 = new JButton(new ImageIcon("src/main/resources/sprite/mario_theme.png"));
         Theme3.setBorderPainted(false);
         Theme3.setContentAreaFilled(false);
         Theme3.addActionListener(new ActionListener() {
@@ -96,7 +96,7 @@ public class Theme extends JFrame{
         buttonsPanel.add(Theme4);
         
 
-        buttonsPanel.setPreferredSize(new Dimension(600, 100));
+        buttonsPanel.setPreferredSize(new Dimension(200, 100));
 
         // Center the frame on the screen
         setLocationRelativeTo(null);

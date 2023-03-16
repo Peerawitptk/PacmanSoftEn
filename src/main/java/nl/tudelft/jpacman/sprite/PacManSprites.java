@@ -59,9 +59,9 @@ public class PacManSprites extends SpriteStore {
         if (config.getConfig() == "0") {
             return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
         }else if (config.getConfig()=="1"){
-            return directionSprite("/sprite/pacman_olympic.png", PACMAN_ANIMATION_FRAMES);
-        }else if (config.getConfig()=="2"){
             return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
+        }else if (config.getConfig()=="2"){
+            return directionSprite("/sprite/pacman_mario.png", PACMAN_ANIMATION_FRAMES);
         }else{
             return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
         }        
@@ -116,11 +116,21 @@ public class PacManSprites extends SpriteStore {
      */
     public Map<Direction, Sprite> getGhostSprite(GhostColor color) {
         assert color != null;
-
-        String resource = "/sprite/ghost_" + color.name().toLowerCase()
-                + ".png";
-        return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        if (config.getConfig() == "0"){
+        return directionSprite("/sprite/ghost_" + color.name().toLowerCase()
+        + ".png", GHOST_ANIMATION_FRAMES);
+        }else if (config.getConfig() == "1"){
+            return directionSprite("/sprite/ghost_" + color.name().toLowerCase()
+        + ".png", GHOST_ANIMATION_FRAMES);
+        }else if (config.getConfig() == "2"){
+            return directionSprite("/sprite/ghost1_" + color.name().toLowerCase()
+        + ".png", GHOST_ANIMATION_FRAMES);
+        }else{
+            return directionSprite("/sprite/ghost_" + color.name().toLowerCase()
+        + ".png", GHOST_ANIMATION_FRAMES);
+        }
     }
+    /*NOT COMMIT! NOT COMMIT!  NOT COMMIT!  NOT COMMIT!  NOT COMMIT! NOT COMMIT! NOT COMMIT!  */
 
     /**
      * @return The sprite for the wall.
@@ -132,7 +142,7 @@ public class PacManSprites extends SpriteStore {
         }else if (config.getConfig()=="1"){
             return loadSprite("/sprite/wall.png");
         }else if (config.getConfig()=="2"){
-            return loadSprite("/sprite/wall.png");
+            return loadSprite("/sprite/wall_mario.png");
         }else{
             return loadSprite("/sprite/wall.png");
         }
@@ -148,7 +158,7 @@ public class PacManSprites extends SpriteStore {
         }else if (config.getConfig()=="1"){
             return loadSprite("/sprite/floor.png");
         }else if (config.getConfig()=="2"){
-            return loadSprite("/sprite/floor.png");
+            return loadSprite("/sprite/floor_mario.png");
         }else{
             return loadSprite("/sprite/floor.png");
         }
@@ -164,7 +174,7 @@ public class PacManSprites extends SpriteStore {
         }else if (config.getConfig()=="1"){
             return loadSprite("/sprite/apple.png");
         }else if (config.getConfig()=="2"){
-            return loadSprite("/sprite/strawberry.png");
+            return loadSprite("/sprite/coin.png");
         }else{
             return loadSprite("/sprite/melon.png");
         }
