@@ -72,7 +72,7 @@ public class PacManUiBuilder {
         if (defaultButtons) {
             addStartButton(game);
             addStopButton(game);
-            addRestartButton(game); /*add restart */
+            /*addRestartButton(game); /*add restart */
             addBackButton(game);
         }
         return new PacManUI(game, buttons, keyMappings, scoreFormatter);
@@ -161,8 +161,8 @@ public class PacManUiBuilder {
         defaultButtons = true;
         buttons.put(START_CAPTION, null);
         buttons.put(STOP_CAPTION, null);
-        buttons.put(RESTART_CAPTION, null); /* restart */
-        buttons.put(RESTART_CAPTION, null); /* back to theme select */
+        /*buttons.put(RESTART_CAPTION, null);  restart */
+        buttons.put(BACK_CAPTION, null); /* back to theme select */
         return this;
     }
 
