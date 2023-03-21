@@ -51,7 +51,7 @@ public class Theme extends JFrame{
         });
         buttonsPanel.add(Theme1);
 
-        JButton Theme2 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeTest.png"));
+        JButton Theme2 = new JButton(new ImageIcon("src/main/resources/sprite/Poke_theme.png"));
         Theme2.setBorderPainted(false);
         Theme2.setContentAreaFilled(false);
         Theme2.addActionListener(new ActionListener() {
@@ -81,7 +81,7 @@ public class Theme extends JFrame{
         buttonsPanel.add(Theme3);
 
 
-        JButton Theme4 = new JButton(new ImageIcon("src/main/resources/sprite/ThemeTest.png"));
+        JButton Theme4 = new JButton(new ImageIcon("src/main/resources/sprite/ghost_theme.png"));
         Theme4.setBorderPainted(false);
         Theme4.setContentAreaFilled(false);
         Theme4.addActionListener(new ActionListener() {
